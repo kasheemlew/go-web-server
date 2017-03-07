@@ -22,7 +22,7 @@ func sayhelloName(w http.ResponseWriter, r *http.Request) {
 
 func main() {
     http.HandleFunc("/", sayhelloName)
-    err := http.ListenAndServe(":9090", nil)
+    err := http.ListenAndServe("localhost:9090", nil)
     if err != nil {
         log.Fatal("ListenAndServe:", err)
     }
